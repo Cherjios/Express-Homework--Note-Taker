@@ -1,6 +1,7 @@
 // Dependencies
 var express = require("express");
 var path = require("path");
+var db_json = require("./db/db.json")
 
 // Sets up the Express App
 // =============================================================
@@ -14,16 +15,16 @@ app.use(express.json());
 //Routes
 // Basic route that sends the user first to the AJAX Page
 app.get("/notes", function(req, res) {
-    res.sendFile(path.join(__dirname, "notes.html"));
+    res.sendFile(path.join(__dirname, "./public/notes.html"));
   });
   
   app.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname, "index.html"));
+    res.sendFile(path.join(__dirname, "./public/index.html"));
   });
   
   // Displays all Notes
 app.get("/api/notes", function(req, res) {
-    return res.json(characters);
+    return res.json(db_json);
   });
 
   // Create New Note - takes in JSON input
