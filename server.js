@@ -21,3 +21,31 @@ app.get("/notes", function(req, res) {
     res.sendFile(path.join(__dirname, "index.html"));
   });
   
+  // Displays all Notes
+app.get("/api/notes", function(req, res) {
+    return res.json(characters);
+  });
+
+  // Create New Note - takes in JSON input
+    app.post("/api/notes", function(req, res) {
+    // req.body hosts is equal to the JSON post sent from the user
+    // This works because of our body parsing middleware
+    var new_notes = req.body;
+  
+    // Using a RegEx Pattern to remove spaces from newCharacter
+    // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
+    new_notes.routeName = new_notes.name.replace(/\s+/g, "").toLowerCase();
+  
+    console.log(new_notes);
+  
+    characters.push(new_notes);
+  
+    res.json(new_notes);
+  });
+  
+  // Starts the server to begin listening
+  // =============================================================
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
+  
