@@ -18,12 +18,7 @@ cd Express-Homework--Note-Taker
 ```
 
 ## Usage
-```
-
-```
-![team](team.gif)
-
-
+![Usage](Note Taker.gif)
 
 ## License
 No license need it
