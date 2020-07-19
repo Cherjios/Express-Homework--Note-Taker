@@ -24,6 +24,7 @@ cd Express-Homework--Note-Taker
 
 ## Deploy-Link
 [https://tranquil-garden-00681.herokuapp.com/](https://tranquil-garden-00681.herokuapp.com/)
+<a href"https://tranquil-garden-00681.herokuapp.com/" target="_blank">https://tranquil-garden-00681.herokuapp.com/</a>
 
 ## Usage
 ![Usage](NoteTaker.gif)
