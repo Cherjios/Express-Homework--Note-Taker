@@ -30,22 +30,29 @@ app.get("*", function(req, res) {
 
 // Create New Note - takes in JSON input
 app.post("/api/notes", function(req, res) {
-// req.body hosts is equal to the JSON post sent from the user
-// This works because of our body parsing middleware
-var new_notes = req.body;
-
-// Using a RegEx Pattern to remove spaces from newCharacter
-// You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-new_notes.routeName = new_notes.name.replace(/\s+/g, "").toLowerCase();
-
-console.log(new_notes);
-
-db_json.push(new_notes);
-
-res.json(new_notes);
+    var new_notes = req.body;
+    var notes = fs.readFileSync("./db/db.json");
+    new_notes.id = String(notes.length);
+    notes = JSON.parse(notes);
+    notes.push(new_notes);
+    fs.writeFileSync("./db/db.json",JSON.stringify(notes));
+    res.json(notes);
 });
 
-  
+// app.delete("/api/notes/:id", function(req, res){
+//     var noteId = req.params.id;
+//     notes = fs.readFileSync("./db/db.json");
+//     notes = JSON.parse(notes);
+//     notes = notes.filter(function(note){
+//         if (noteId === note.id){
+//             return false;
+//         }else{
+//             return true;
+//         }
+//     })
+//     fs.writeFileSync("./db/db.json", JSON.stringify(notes));
+//     res.json(notes);
+// });
   
 // Starts the server to begin listening
 // =============================================================
