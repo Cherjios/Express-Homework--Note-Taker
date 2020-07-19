@@ -6,6 +6,7 @@
 ## Table of Contents
 - [Installation](#Installation)
 - [Technology](#Technology)
+- [Deploy link](#Deploy-Link)
 - [Usage](#Usage)
 - [Contributing](#Contributing)
 - [Questions](#Questions)
@@ -20,6 +21,9 @@ cd Express-Homework--Note-Taker
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/)
+
+## Deploy-Link
+[https://tranquil-garden-00681.herokuapp.com/](https://tranquil-garden-00681.herokuapp.com/)
 
 ## Usage
 ![Usage](NoteTaker.gif)
