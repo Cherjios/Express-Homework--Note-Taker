@@ -1,4 +1,4 @@
-# Express-Homework--Note-Taker
+# Express-Homework-Note-Taker
 ### Application that can be used to write, save, and delete notes. This application will use an express backend and save and retrieve note data from a JSON file.
 
 [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/Naereen/ama)
